@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Time from './time'
 
 class List extends Component {
 
@@ -19,7 +18,7 @@ class List extends Component {
                         {this.props.listitem.item}
                     </li>
                 </ul>
-                <Time />
+
             </div>
 
         );

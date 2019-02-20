@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import List from './list'
+// import Time from './time'
 
 class App extends Component {
 
@@ -11,6 +12,7 @@ class App extends Component {
       item: ''
     }
   }
+
 
 
   updateList = (event) => {
@@ -97,7 +99,6 @@ class App extends Component {
 
   render() {
 
-    // console.log('map ', this.state.addList)
     const toDoList = this.state.addList.map((toDoData, index) => {
       return <List onMark={this.markTheitem} listitem={toDoData} id={index} />;
 
@@ -106,11 +107,11 @@ class App extends Component {
 
       <div>
 
-        <h1>TodoList</h1>
+        <h1>To Do List</h1>
         <form onSubmit={this.sumited}>
 
           <div className="input-group col-sm-5 mx-auto">
-            <input type='text' className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="item" onChange={this.updateList} value={this.state.ListData.item}></input>
+            <input type='text' className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="item" onChange={this.updateList} value={this.state.ListData.item} placeholder='write here ...'></input>
           </div>
 
           <div className="my-4">
