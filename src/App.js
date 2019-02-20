@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import List from './list'
-// import Time from './time'
+import Time from './time'
 
 class App extends Component {
 
@@ -106,6 +106,7 @@ class App extends Component {
     return (
 
       <div>
+        <Time />
 
         <h1>To Do List</h1>
         <form onSubmit={this.sumited}>
@@ -123,6 +124,7 @@ class App extends Component {
         </form>
 
         {toDoList}
+
       </div >
 
     );

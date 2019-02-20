@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class List extends Component {
 
 
-    // every time click any text or li will take the index and send it to 
+    // every time click any task will take the index and send it to 
     //markTheitem function 
     onClick = () => {
         this.props.onMark(this.props.id)
