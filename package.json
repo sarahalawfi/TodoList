@@ -9,6 +9,7 @@
     "moment": "^2.24.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+    "react-responsive": "^6.1.1",
     "react-scripts": "2.1.5"
   },
   "scripts": {

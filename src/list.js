@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class List extends Component {
 
 
@@ -13,11 +14,15 @@ class List extends Component {
     render() {
         return (
             <div className='showlist'>
+
                 <ul onClick={this.onClick}>
+
                     <li className={this.props.listitem.markText}>
                         {this.props.listitem.item}
                     </li>
+
                 </ul>
+
 
             </div>
 
