@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import List from './list'
-//import Time from './time'
+import Time from './time'
 
 
 class App extends Component {
@@ -39,18 +39,21 @@ class App extends Component {
     const copy = this.state.addList.slice(0);
     //prevent the form from refreshing the page
     event.preventDefault();
-    //add the new data to the array
-    copy.push(this.state.ListData)
-    //update the state with our new copy
-    this.setState({
-      addList: copy,
-      // to clear the input box
-      ListData: {
-        item: ''
 
-      }
+    if (this.state.ListData.item != "") {
+      //add the new data to the array
+      copy.push(this.state.ListData)
+      //update the state with our new copy
+      this.setState({
+        addList: copy,
+        // to clear the input box
+        ListData: {
+          item: ''
 
-    })
+        }
+
+      })
+    }
 
   }
 
@@ -108,7 +111,7 @@ class App extends Component {
 
       <div>
 
-
+        <Time />
         <h1>To Do List</h1>
         <form onSubmit={this.sumited}>
 
